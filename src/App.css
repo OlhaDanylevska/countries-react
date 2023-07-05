@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+.App {}
 
 .App-logo {
   height: 40vmin;
@@ -32,7 +30,61 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: 0, auto;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  width: 14rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  background-color: #fafafa;
+  box-shadow: 5px 5px 6px rgb(214, 214, 214);
+}
+
+.flag-image {
+  width: 14rem;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.text-holder {
+  margin: 1rem;
+}
+
+.text-holder h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #282c34;
+  padding-bottom: 0.5rem;
+  border-bottom: #c7c7c7 solid 1px;
+}
+
+tbody tr {
+  border: #282c34 solid 1px;
+  gap: 2rem;
+}
+
+.key {
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.value {
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
 }
