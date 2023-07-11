@@ -1,43 +1,37 @@
 import { useState } from "react"
 import SearchBar from "./SearchBar"
 import FilterRegion from "./FilterRegion"
+import SeparateCountryCard from './SeparateCountryCard';
+
 
 const CountryCard = ({ Data }) => {
     const [allCountries, setAllCountries] = useState(Data)
+    const [pickedCountry, setPickedCountry] = useState("")
 
-
-    // const fetchImage = () => {
-    //     fetch("https://restcountries.com/v3.1/all")
-    //         .then(response => {
-    //             if (!response.ok) {
-    //                 throw new Error(response.status)
-    //             } else {
-    //                 return response.json()
-    //             }
-    //         })
-    //         .then((data) => {
-    //             if (data) {
-    //                 setAllCountries(data)
-    //                 setFilteredCountries(data)
-    //             }
-    //         })
-    // }
-
-    // useEffect(() => {
-    //     fetchImage()
-    // }, []);
+    const handleCardClick = (country) => {
+        setPickedCountry(country.name)
+        console.log(pickedCountry)
+    }
 
     return (
         <div className="page-holder">
-            <div className="header">
-                <SearchBar Data={Data} setAllCountries={setAllCountries} />
-                <FilterRegion Data={Data} setAllCountries={setAllCountries} />
+            <div className="header-holder">
+                <div className="container-for-sep-card">
+                    < SeparateCountryCard Data={Data} pickedCountry={pickedCountry} setPickedCountry={setPickedCountry} />
+                </div>
+                <div className="header">
+                    <SearchBar Data={Data} setAllCountries={setAllCountries} />
+
+                    <FilterRegion Data={Data} setAllCountries={setAllCountries} />
+                </div>
+
+
             </div>
 
             <div className="cards-container">
 
                 {allCountries.map(country => (
-                    < div key={country.id} className="card" >
+                    < div key={country.id} className="card" onClick={() => handleCardClick(country)}>
                         <img alt="flag" src={country.flags.svg} className="flag-image" />
                         <div className="text-holder" >
                             <h3>{country.name}</h3>

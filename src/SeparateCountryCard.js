@@ -1,9 +1,15 @@
 
-const SeparateCountryCard = ({ Data }) => {
+const SeparateCountryCard = ({ Data, pickedCountry, setPickedCountry }) => {
+    console.log({ Data })
+
+    const handleBorderCountryClick = (code) => {
+        setPickedCountry(code)
+    }
+
     return <div className="sep-container">
 
         {Data.map(country => {
-            if (country.name === "Argentina") {
+            if (country.name === pickedCountry) {
                 return (
                     <div className="separate-card">
                         <div className="sep-image-holder">
@@ -54,11 +60,15 @@ const SeparateCountryCard = ({ Data }) => {
                                     </tbody>
                                 </table>
                             </div>
-                            <div>{country.borders.map(border => (
-                                Data.map((country) => (
-                                    country.alpha3Code === border && <button>{country.name}</button>
+                            <div className="counties-border">{
+                                country.borders &&
+                                country.borders.map(border => (
+
+                                    Data.map((country) => (
+                                        country.alpha3Code === border && <button onClick={() => handleBorderCountryClick(country.name)}>{country.name}</button>
+                                    ))
                                 ))
-                            ))}</div>
+                            }</div>
 
                         </div>
                     </div>

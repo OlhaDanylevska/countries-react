@@ -140,7 +140,8 @@ tbody tr {
 }
 
 .separate-card {
-  margin-top: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   width: 40rem;
   background-color: rgb(243, 243, 243);
   height: 25rem;
@@ -157,10 +158,15 @@ tbody tr {
 
   width: 16rem;
   height: 10rem;
+  padding: 0 2rem 0 2rem;
+}
+
+.text-block {
+  padding-right: 2rem;
 }
 
 .sep-image-holder img {
-  width: 16rem;
+  width: 15rem;
 }
 
 .holder-for-tables {
@@ -173,4 +179,11 @@ tbody tr {
 
 table {
   text-align: left;
+}
+
+
+
+.counties-border button {
+  margin: 0.2rem;
+
 }
