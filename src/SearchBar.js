@@ -1,5 +1,5 @@
 import { useState } from "react";
-const SearchBar = ({ Data, setAllCountries, allCountries }) => {
+const SearchBar = ({ Data, setAllCountries }) => {
 
     const [searchInput, setSearchInput] = useState("");
 

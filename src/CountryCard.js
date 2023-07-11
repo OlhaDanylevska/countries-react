@@ -30,7 +30,7 @@ const CountryCard = ({ Data }) => {
     return (
         <div className="page-holder">
             <div className="header">
-                <SearchBar Data={Data} allCountries={allCountries} setAllCountries={setAllCountries} />
+                <SearchBar Data={Data} setAllCountries={setAllCountries} />
                 <FilterRegion Data={Data} setAllCountries={setAllCountries} />
             </div>
 

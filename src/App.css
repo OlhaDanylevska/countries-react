@@ -122,13 +122,55 @@ tbody tr {
 .key {
   text-align: left;
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 200;
 }
 
 .value {
   text-align: left;
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
+  padding-left: 1rem;
+}
+
+.sep-container {
+  display: flex;
+  justify-content: center;
+}
+
+.separate-card {
+  margin-top: 4rem;
+  width: 40rem;
+  background-color: rgb(243, 243, 243);
+  height: 25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.5rem;
+  color: #282c34;
+  box-shadow: 5px 5px 6px rgb(214, 214, 214);
+}
+
+.sep-image-holder {
+
+  width: 16rem;
+  height: 10rem;
+}
+
+.sep-image-holder img {
+  width: 16rem;
+}
+
+.holder-for-tables {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  gap: 1rem;
+}
+
+table {
+  text-align: left;
 }
