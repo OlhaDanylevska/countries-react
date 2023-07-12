@@ -1,5 +1,5 @@
 import { useState } from "react";
-const SearchBar = ({ Data, setAllCountries }) => {
+const SearchBar = ({ Data, setAllCountries, darkMode, setDarkMode }) => {
 
     const [searchInput, setSearchInput] = useState("");
 
@@ -21,7 +21,7 @@ const SearchBar = ({ Data, setAllCountries }) => {
 
     return (
         <div className="search-bar-holder">
-            <input value={searchInput} onChange={handleChange} type="text" className="search-bar" placeholder="Search Country"></input>
+            <input value={searchInput} onChange={handleChange} type="text" className={darkMode ? "search-bar-dark" : "search-bar"} placeholder="Search Country"></input>
         </div >
     )
 }

@@ -1,4 +1,4 @@
-const FilterRegion = ({ Data, setAllCountries }) => {
+const FilterRegion = ({ Data, setAllCountries, setDarkMode, darkMode }) => {
 
     const handleChange = (e) => {
         if (e.target.value !== "") {
@@ -14,7 +14,7 @@ const FilterRegion = ({ Data, setAllCountries }) => {
     return (
         <div>
             <label for="rerion-select">Choose Region</label>
-            <select name="" id="region-select" onChange={handleChange}>
+            <select name="" id={darkMode ? "region-select-dark" : "region-select"} onChange={handleChange}>
                 <option value="" selected>- Please Select Region -</option>
                 <option value="asia" >Asia</option>
                 <option value="africa">Africa</option>

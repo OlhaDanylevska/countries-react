@@ -1,5 +1,5 @@
 
-const SeparateCountryCard = ({ Data, pickedCountry, setPickedCountry }) => {
+const SeparateCountryCard = ({ Data, pickedCountry, setPickedCountry, setAllCountries, darkMode, setDarkMode }) => {
     console.log({ Data })
 
     const handleBorderCountryClick = (code) => {
@@ -8,19 +8,18 @@ const SeparateCountryCard = ({ Data, pickedCountry, setPickedCountry }) => {
 
     const handleCloseButton = () => {
         setPickedCountry("")
+        setAllCountries(Data)
     }
 
     return <div className="sep-container">
-
         {Data.map(country => {
             if (country.name === pickedCountry) {
                 return (
-
-                    <div className="separate-card-wrapper">
-                        <div className="close-wrapper">
+                    <div className={darkMode ? "separate-card-wrapper-dark" : "separate-card-wrapper"}>
+                        <div className={darkMode ? "close-wrapper-dark" : "close-wrapper"}>
                             <button onClick={handleCloseButton}>x</button>
                         </div>
-                        <div className="separate-card">
+                        <div className={darkMode ? "separate-card-dark" : "separate-card"}>
                             <div className="sep-image-holder">
                                 <img src={country.flags.svg}></img>
                             </div>
@@ -79,8 +78,6 @@ const SeparateCountryCard = ({ Data, pickedCountry, setPickedCountry }) => {
                                     ))
                                 }</div>
                             </div>
-
-
                         </div>
                     </div>
                 )

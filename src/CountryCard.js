@@ -7,31 +7,39 @@ import SeparateCountryCard from './SeparateCountryCard';
 const CountryCard = ({ Data }) => {
     const [allCountries, setAllCountries] = useState(Data)
     const [pickedCountry, setPickedCountry] = useState("")
+    const [darkMode, setDarkMode] = useState(false)
 
     const handleCardClick = (country) => {
         setPickedCountry(country.name)
         console.log(pickedCountry)
+        setAllCountries([])
     }
 
     return (
-        <div className="page-holder">
+        <div className={darkMode ? "page-holder-dark" : "page-holder"}>
+            <div className="nav-bar">
+                <h3>Where in the World?</h3>
+                <div className="dark-mode">
+                    <img src="https://static.thenounproject.com/png/4157080-200.png"></img>
+                    <span onClick={() => setDarkMode(!darkMode)} >Dark Mode</span>
+                </div>
+            </div>
             <div className="header-holder">
-
                 <div className="header">
-                    <SearchBar Data={Data} setAllCountries={setAllCountries} />
+                    <SearchBar setDarkMode={setDarkMode} darkMode={darkMode} Data={Data} setAllCountries={setAllCountries} />
 
-                    <FilterRegion Data={Data} setAllCountries={setAllCountries} />
+                    <FilterRegion setDarkMode={setDarkMode} darkMode={darkMode} Data={Data} setAllCountries={setAllCountries} />
                 </div>
 
                 <div className="container-for-sep-card">
-                    < SeparateCountryCard Data={Data} pickedCountry={pickedCountry} setPickedCountry={setPickedCountry} />
+                    < SeparateCountryCard setAllCountries={setAllCountries} Data={Data} pickedCountry={pickedCountry} setPickedCountry={setPickedCountry} darkMode={darkMode} setDarkMode={setDarkMode} />
                 </div>
             </div>
 
             <div className="cards-container">
 
                 {allCountries.map(country => (
-                    < div key={country.id} className="card" onClick={() => handleCardClick(country)}>
+                    < div key={country.id} className={darkMode ? "card-dark" : "card"} onClick={() => handleCardClick(country)}>
                         <img alt="flag" src={country.flags.svg} className="flag-image" />
                         <div className="text-holder" >
                             <h3>{country.name}</h3>
