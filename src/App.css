@@ -132,6 +132,8 @@ tbody tr {
   font-size: 14px;
   font-weight: 300;
   padding-left: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sep-container {
@@ -139,19 +141,37 @@ tbody tr {
   justify-content: center;
 }
 
-.separate-card {
+.separate-card-wrapper {
+  font-family: 'Poppins', sans-serif;
   margin-top: 3rem;
   margin-bottom: 3rem;
   width: 40rem;
   background-color: rgb(243, 243, 243);
-  height: 25rem;
+  max-height: 30rem;
+  box-shadow: 5px 5px 6px rgb(214, 214, 214);
+}
+
+.close-wrapper {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  text-align: right;
+}
+
+.close-wrapper button {
+  border: none;
+  font-size: 18px;
+  background-color: rgb(243, 243, 243);
+}
+
+.separate-card {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   border-radius: 0.5rem;
   color: #282c34;
-  box-shadow: 5px 5px 6px rgb(214, 214, 214);
+  margin-bottom: 2rem;
+
 }
 
 .sep-image-holder {
@@ -163,6 +183,7 @@ tbody tr {
 
 .text-block {
   padding-right: 2rem;
+  max-width: 20rem;
 }
 
 .sep-image-holder img {
@@ -170,7 +191,6 @@ tbody tr {
 }
 
 .holder-for-tables {
-  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: row;
   font-size: 12px;
@@ -179,9 +199,13 @@ tbody tr {
 
 table {
   text-align: left;
+  justify-content: end;
+
 }
 
-
+.counties-border {
+  margin-top: 1rem;
+}
 
 .counties-border button {
   margin: 0.2rem;

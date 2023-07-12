@@ -16,16 +16,16 @@ const CountryCard = ({ Data }) => {
     return (
         <div className="page-holder">
             <div className="header-holder">
-                <div className="container-for-sep-card">
-                    < SeparateCountryCard Data={Data} pickedCountry={pickedCountry} setPickedCountry={setPickedCountry} />
-                </div>
+
                 <div className="header">
                     <SearchBar Data={Data} setAllCountries={setAllCountries} />
 
                     <FilterRegion Data={Data} setAllCountries={setAllCountries} />
                 </div>
 
-
+                <div className="container-for-sep-card">
+                    < SeparateCountryCard Data={Data} pickedCountry={pickedCountry} setPickedCountry={setPickedCountry} />
+                </div>
             </div>
 
             <div className="cards-container">
