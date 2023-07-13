@@ -20,7 +20,7 @@ const CountryCard = ({ Data }) => {
             <div className="nav-bar">
                 <h3>Where in the World?</h3>
                 <div className="dark-mode">
-                    <img src="https://static.thenounproject.com/png/4157080-200.png"></img>
+                    <img alt="flag" src="https://static.thenounproject.com/png/4157080-200.png"></img>
                     <span onClick={() => setDarkMode(!darkMode)} style={darkMode ? { color: "white" } : { colour: "black" }} >Dark Mode</span>
                 </div>
             </div>
