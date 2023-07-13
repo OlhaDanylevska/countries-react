@@ -149,7 +149,7 @@ tbody tr {
   margin-bottom: 3rem;
   width: 40rem;
   background-color: rgb(243, 243, 243);
-  max-height: 30rem;
+  max-height: 40rem;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   border-radius: 0.4rem;
 }
@@ -300,7 +300,7 @@ table {
   width: 40rem;
   background-color: #151515;
   color: #fafafa !important;
-  max-height: 30rem;
+  max-height: 40rem;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   border-radius: 0.4rem;
 }
